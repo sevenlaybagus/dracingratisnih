@@ -2,7 +2,7 @@ import User from "#models/user";
 import commands from "../datas/commands.js";
 import { TelegramMessage } from "../types/telegram.js";
 
-export async function startCommand(user: User, message: TelegramMessage, args: string[], sendMessage: (chatId: string, data: any) => Promise<unknown>) {
+export async function startCommand(user: User, message: TelegramMessage, sendMessage: (chatId: string, data: any) => Promise<unknown>) {
     const menus: string[] = [];
 
     let index = 1

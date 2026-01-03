@@ -29,11 +29,10 @@ export class TelegramService {
 
   private async handleCommand(user: User, message: TelegramMessage) {
     const command = message.text.split(' ')[0]
-    const args = message.text.split(' ').slice(1)
 
     if (commands.find((cmd) => cmd.command == command)) {
       if (command == '/start')
-        return await startCommand(user, message, args, this.sendMessage)
+        return await startCommand(user, message, this.sendMessage)
     }
 
     return null
